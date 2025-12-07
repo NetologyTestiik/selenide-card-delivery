@@ -1,0 +1,35 @@
+
+image: Ubuntu2204
+stack: jdk 11
+
+
+branches:
+  only:
+    - main
+
+
+cache:
+  - ~/.gradle/wrapper
+  - ~/.gradle/caches
+
+
+install:
+
+  - java -jar ./artifacts/app-card-delivery.jar &
+
+  - sleep 5
+
+
+build_script:
+
+  - ./gradlew test --info -Dselenide.headless=true
+
+
+after_build:
+
+  - echo "Build completed!"
+
+
+artifacts:
+  - path: build/reports/tests/test/
+    name: test-reports
