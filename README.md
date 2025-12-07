@@ -1,24 +1,22 @@
-# Автоматизация тестирования формы заказа карты с доставкой
+# Card Delivery Automation Tests
 
-## Описание проекта
-Автоматизированные тесты для формы заказа банковской карты с доставкой.
+Homework for Netology course "2.2. Selenide"
 
-## Технологии
+## Test
+Automated test for card delivery form submission.
+
+## Technologies
 - Java 11
 - Selenide 6.19.1
 - JUnit 5
 - Gradle
 
-## Запуск тестов
+## Run tests
 ```bash
 ./gradlew test
 ```
 
-## Структура проекта
-- `artifacts/app-card-delivery.jar` - тестируемое приложение
-- `src/test/java/ru/netology/CardDeliveryTest.java` - тестовый класс
-- `.github/workflows/gradle.yml` - конфигурация CI/CD
-
-## Тестовый сценарий
-- Заполнение формы валидными данными
-- Проверка успешного бронирования
+## Project structure
+- `artifacts/app-card-delivery.jar` - application
+- `src/test/java/ru/netology/CardDeliveryTest.java` - test
+- `.github/workflows/gradle.yml` - CI/CD
